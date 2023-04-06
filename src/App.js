@@ -8,6 +8,7 @@ import { Navbar } from './pages/Navbar'
 import { useState, createContext } from 'react'
 import {ChangeProfile} from './components/ChangeProfile'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { Form } from './pages/Form'
 
 
 export const AppContext = createContext() 
@@ -25,6 +26,7 @@ export default function App() {
       <Router>
         <Navbar />
         <Routes>
+          <Route path='/form' element={<Form />} />
           <Route path='/' element={<Home/>}/>
           <Route path='/profile' element={<Profile/>}/>
           <Route path='/contact' element={<Contact />}/>
